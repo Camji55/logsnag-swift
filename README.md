@@ -12,9 +12,11 @@
 
 ## Installation
 
-```sh
-npm install --save logsnag
-```
+### Swift Package Manager
+
+- File > Swift Packages > Add Package Dependency
+- Add `https://github.com/Camji55/logsnag-swift.git`
+- Select "Up to Next Major" with "1.0.0"
 
 ## Usage
 
