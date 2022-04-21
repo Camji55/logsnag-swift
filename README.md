@@ -1,7 +1,7 @@
 <div align="center">
-<!--     <img src="https://logsnag.com/og-image.png" alt="LogSnag"/> -->
+    <img src="https://logsnag.com/og-image.png" alt="LogSnag"/>
     <br>
-    <h1>LogSnag Swift (Unofficial)</h1>
+    <h1>LogSnag Swift</h1>
     <p>Get notifications and track your project events.</p>
     <a href="https://discord.gg/dY3pRxgWua"><img src="https://img.shields.io/discord/922560704454750245?color=%237289DA&label=Discord" alt="Discord"></a>
     <a href="https://docs.logsnag.com"><img src="https://img.shields.io/badge/Docs-LogSnag" alt="Documentation"></a>
