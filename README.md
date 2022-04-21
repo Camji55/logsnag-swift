@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://logsnag.com/og-image.png" alt="LogSnag"/>
+<!--     <img src="https://logsnag.com/og-image.png" alt="LogSnag"/> -->
     <br>
     <h1>LogSnag Swift</h1>
     <p>Get notifications and track your project events.</p>
