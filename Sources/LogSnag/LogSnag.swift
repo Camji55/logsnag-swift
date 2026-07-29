@@ -49,6 +49,11 @@ public class LogSnagClient {
         var options = options
         options.project = project
         
+        if options.autoAddUserId == true, options.userId == nil  {
+            options.userId = generateOrRetrieveUserId()
+            options.autoAddUserId = nil
+        }
+        
         request.httpBody = try? jsonEncoder.encode(options)
         
         return request
@@ -71,5 +76,17 @@ public class LogSnagClient {
     /// - Returns: Combine `Publisher`
     public func publish(options: PublishOptions) -> AnyPublisher<Bool, Error> {
         dataClient.dataTaskPublisher(for: request(options: options))
+    }
+    
+    private func generateOrRetrieveUserId() -> String {
+        // Retrieve the user ID if it's already been generated.
+        if let existingId = UserDefaults.standard.string(forKey: "logSnagUserId") {
+            return existingId
+        } else {
+            // Generate a new user ID if one does not exist, then store it for future use.
+            let newId = UUID().uuidString
+            UserDefaults.standard.setValue(newId, forKey: "logSnagUserId")
+            return newId
+        }
     }
 }
